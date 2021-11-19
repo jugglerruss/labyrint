@@ -32,4 +32,8 @@ public class Game : MonoBehaviour
         }
         Destroy(FindObjectOfType<Finish>().gameObject);
     }
+    public void Qiut()
+    {
+        Application.Quit();
+    }
 }

@@ -42,6 +42,7 @@ public class InputSystem : MonoBehaviour
     }
     public void Restart()
     {
+        _panelRestart.gameObject.SetActive(true);
         StartCoroutine(Fade());
     }
     private IEnumerator Fade()
@@ -57,6 +58,6 @@ public class InputSystem : MonoBehaviour
             yield return new WaitForEndOfFrame();
             _image.color = new Color(0, 0, 0, _image.color.a - 0.01f);
         } while (_image.color.a > 0f);
-        Continue();
+        _panelRestart.gameObject.SetActive(false);
     }
 }

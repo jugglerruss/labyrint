@@ -10,8 +10,4 @@ public class ShieldButton : MonoBehaviour
     {
         MouseDown.Invoke();
     }
-    void Update()
-    {
-        
-    }
 }

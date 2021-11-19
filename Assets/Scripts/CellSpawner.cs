@@ -47,6 +47,7 @@ public class CellSpawner : MonoBehaviour
     private void PutInCell(Cell cell,Transform transform)
     {
         Instantiate(transform, cell.transform.position + new Vector3(_finishPos, -_finishPos, -_finishPos), Quaternion.identity);
+        cell.AcivateDeadZone(false);
     }
 
     private IEnumerator WaitGenerate()
